@@ -1,10 +1,15 @@
+<div class="row d-flex justify-content-center mb-4">
+  <h3>Choose Your Favorite <i class="fa fa-heart"></i></h3>
+</div>
 <div class="row">
-  <div class="col-md-3" *ngFor="let subCategory of subCategories">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">{{ subCategory.subName }}</h5>
-        <a href="#" class="btn btn-primary">select</a>
+  <ul class="sub-category-list">
+    <li *ngFor="let subCategory of subCategories">
+      <div class="input-group mb-3 w-100">
+        <div class="input-group-text">
+          <input type="checkbox" aria-label="Checkbox for following text input">
+          &nbsp;&nbsp;<span>{{subCategory.subName}}</span>
+        </div>
       </div>
-    </div>
-  </div>
+    </li>
+  </ul>
 </div>

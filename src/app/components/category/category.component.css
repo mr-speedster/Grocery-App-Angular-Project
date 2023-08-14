@@ -1,3 +1,8 @@
-.shop-name{
+.special-title{
     font-family: 'Rubik Wet Paint', cursive;
+}
+.category-image{
+    width: 18rem;
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }

@@ -13,6 +13,7 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ProductsComponent } from './components/products/products.component';
 import { SubCategoryComponent } from './components/sub-category/sub-category.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SubCategoryComponent } from './components/sub-category/sub-category.com
     AboutPageComponent,
     ContactPageComponent,
     ProductsComponent,
-    SubCategoryComponent
+    SubCategoryComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
