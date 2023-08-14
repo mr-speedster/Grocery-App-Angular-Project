@@ -1,1 +1,43 @@
-<p>product-details-page works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+
+    </div>
+    <div class="row my-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body card-height">
+                    <img class="img-fluid" src="{{IMG_BASE_URL+product.image}}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card px-3">
+                <div class="card-body card-height">
+                    <div class="row">
+                        <h2 class="card-title">{{product.productName}}</h2>
+                        <p class="card-text">{{product.description}}</p>
+                    </div>
+                    <div class="row mt-5">
+                        <h6>
+                            <div class="btn btn-warning"><i class="fa fa-minus fa-2xs" aria-hidden="true"></i></div>
+                            {{product.unit}}
+                            <div class="btn btn-warning"><i class="fa fa-plus fa-2xs" aria-hidden="true"></i></div>
+                        </h6> 
+                    </div>
+                    <div class="row mt-5">
+                        <h3>
+                            <span>{{product.price | currency: 'INR'}}</span>
+                            <span>
+                                <S>{{product.mrp | currency: 'INR'}}</S>
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="mt-5">
+                        <a href="" class="btn btn-warning">Add To Cart &nbsp;<i class="fa fa-cart-shopping" aria-hidden="true"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

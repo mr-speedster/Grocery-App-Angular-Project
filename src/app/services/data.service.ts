@@ -23,4 +23,8 @@ export class DataService {
   getProductByCatID(catId: any): Observable<ProductResponse>{
     return this.http.get<ProductResponse>(this.BASE_URL+`products/cat/${catId}`);
   }
+
+  getProductById(productId: any): Observable<any>{
+    return this.http.get<any>(this.BASE_URL+`products/${productId}`)
+  }
 }

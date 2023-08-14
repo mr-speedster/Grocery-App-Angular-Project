@@ -1,0 +1,5 @@
+.card-height{
+    height: 25rem;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}

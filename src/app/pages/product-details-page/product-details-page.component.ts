@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IProduct } from 'src/app/models/product.model';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-product-details-page',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class ProductDetailsPageComponent {
 
+  product: any;
+  productId = '5de4a2b6a32d0906687812ea';
+  IMG_BASE_URL = 'http://rjtmobile.com/grocery/images/';
+
+  constructor(private dataService: DataService){
+    this.dataService.getProductById(this.productId).subscribe((response:any)=>{
+      this.product = response.data;
+    })
+  }
 }
