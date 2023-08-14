@@ -11,6 +11,8 @@ import { ProductPageComponent } from './pages/product-page/product-page.componen
 import { ProductDetailsPageComponent } from './pages/product-details-page/product-details-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { ProductsComponent } from './components/products/products.component';
+import { SubCategoryComponent } from './components/sub-category/sub-category.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     ProductPageComponent,
     ProductDetailsPageComponent,
     AboutPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    ProductsComponent,
+    SubCategoryComponent
   ],
   imports: [
     BrowserModule,
