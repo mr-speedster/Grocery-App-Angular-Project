@@ -1,5 +1,5 @@
 .product-image{
     width: 15rem;
-    aspect-ratio: 3/3;
+    aspect-ratio: 4/3;
     object-fit: contain;
 }
