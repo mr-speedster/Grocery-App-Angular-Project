@@ -1,0 +1,36 @@
+.form {
+    position: relative;
+}
+.form .fa-search {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #9ca3af;
+}
+.form span {
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+}
+.form-input {
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+}
+
+.form-input:focus {
+    box-shadow: none;
+    border: 3px solid #000000;
+}
+
+.icon {
+    transition: transform 1s ease;
+}
+
+.icon:hover{
+    transform: rotate(360deg);
+}
+

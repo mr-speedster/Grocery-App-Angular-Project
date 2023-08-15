@@ -14,6 +14,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { ProductsComponent } from './components/products/products.component';
 import { SubCategoryComponent } from './components/sub-category/sub-category.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SliderComponent } from './components/slider/slider.component';
     ContactPageComponent,
     ProductsComponent,
     SubCategoryComponent,
-    SliderComponent
+    SliderComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
