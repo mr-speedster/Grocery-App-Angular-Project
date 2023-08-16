@@ -18,3 +18,8 @@ export interface ProductResponse {
     count: number;
     data: IProduct[];
 }
+
+export interface productDetailsResponse{
+    error: boolean;
+    data:  IProduct;
+}
