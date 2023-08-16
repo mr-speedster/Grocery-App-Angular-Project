@@ -17,6 +17,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './components/footer/footer.component';
+import { PreLoaderComponent } from './components/pre-loader/pre-loader.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SubCategoryComponent,
     SliderComponent,
     SearchBarComponent,
-    FooterComponent
+    FooterComponent,
+    PreLoaderComponent
   ],
   imports: [
     BrowserModule,
