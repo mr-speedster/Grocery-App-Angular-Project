@@ -18,6 +18,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { PreLoaderComponent } from './components/pre-loader/pre-loader.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PreLoaderComponent } from './components/pre-loader/pre-loader.component
     SliderComponent,
     SearchBarComponent,
     FooterComponent,
-    PreLoaderComponent
+    PreLoaderComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

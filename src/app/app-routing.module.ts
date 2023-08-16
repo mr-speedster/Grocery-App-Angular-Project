@@ -5,14 +5,16 @@ import { ProductPageComponent } from "./pages/product-page/product-page.componen
 import { ProductDetailsPageComponent } from "./pages/product-details-page/product-details-page.component";
 import { AboutPageComponent } from "./pages/about-page/about-page.component";
 import { ContactPageComponent } from "./pages/contact-page/contact-page.component";
+import { ErrorPageComponent } from "./components/error-page/error-page.component";
 
 const routes: Routes = [
-    { path: '', redirectTo:'home', pathMatch:'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomePageComponent },
     { path: 'products/:catId', component: ProductPageComponent },
     { path: 'products/details/:productId', component: ProductDetailsPageComponent },
     { path: 'about', component: AboutPageComponent },
     { path: 'contact', component: ContactPageComponent },
+    { path: '**', component: ErrorPageComponent }
 ]
 
 @NgModule({
