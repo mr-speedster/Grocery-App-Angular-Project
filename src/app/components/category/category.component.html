@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <img class="card-img-top img-fluid category-image" src="{{IMG_BASE_URL + category.catImage}}" alt="">
                     <h5 class="card-title">{{category.catName}}</h5>
-                    <a href="#" class="btn btn-warning">View</a>
+                    <button href="#" (click)="onClickCategory(category)" class="btn btn-warning">View</button>
                 </div>
             </div>
         </div>
