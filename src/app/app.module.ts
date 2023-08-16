@@ -16,6 +16,7 @@ import { SubCategoryComponent } from './components/sub-category/sub-category.com
 import { SliderComponent } from './components/slider/slider.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AppRoutingModule } from './app-routing.module';
     ProductsComponent,
     SubCategoryComponent,
     SliderComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

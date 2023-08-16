@@ -1,3 +1,7 @@
 .special-title{
     font-family: 'Rubik Wet Paint', cursive;
 }
+.form-control:focus{
+    box-shadow: none;
+    border: 1px solid black;
+}

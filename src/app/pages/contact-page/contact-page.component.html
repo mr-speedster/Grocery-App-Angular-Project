@@ -6,26 +6,72 @@
   <div class="row">
     <div class="col-md-7">
       <div>
-        <form>
+        <form method="post">
+          <h4 class="special-title">Drop a Message</h4>
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="txtName"
+                  class="form-control"
+                  placeholder="Your Name"
+                  value=""
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="txtEmail"
+                  class="form-control"
+                  placeholder="Your Email"
+                  value=""
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="txtPhone"
+                  class="form-control"
+                  placeholder="Your Phone Number"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <textarea
+                  name="txtMsg"
+                  class="form-control"
+                  placeholder="Your Message "
+                  style="width: 100%; height: 150px"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              <input
+                type="submit"
+                name="btnSubmit"
+                class="btn btn-warning"
+                value="Send Message"
+              />
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+          </div>
+        </form>
       </div>
     </div>
     <div class="col-md-4 ml-5">
-        <img src="../assets/images/about.jpg" alt="" class="img-fluid">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d984.7023509859205!2d76.48306585336968!3d9.171659090578837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b061dbe9e2c3f3f%3A0xa3cf61f2603706ac!2zOcKwMTAnMTguNCJOIDc2wrAyOScwMC45IkU!5e0!3m2!1sen!2sin!4v1651481298142!5m2!1sen!2sin"
+        width="400"
+        height="300"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
 </div>
