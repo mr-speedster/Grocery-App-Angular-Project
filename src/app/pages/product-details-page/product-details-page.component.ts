@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IProduct, productDetailsResponse } from 'src/app/models/product.model';
+import { productDetailsResponse } from 'src/app/models/product.model';
 import { DataService } from 'src/app/services/data.service';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-product-details-page',
@@ -10,10 +11,11 @@ import { DataService } from 'src/app/services/data.service';
 export class ProductDetailsPageComponent {
 
   product: any;
-  productId = '5de4a2b6a32d0906687812ea';
+  productId:any;
   IMG_BASE_URL = 'http://rjtmobile.com/grocery/images/';
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService,private activatedRoute:ActivatedRoute) {
+    this.productId = this.activatedRoute.snapshot.paramMap.get('productId');
     this.dataService.getProductById(this.productId).subscribe((response: productDetailsResponse) => {
       this.product = response.data;
     })
