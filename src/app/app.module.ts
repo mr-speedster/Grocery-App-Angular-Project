@@ -15,6 +15,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { SubCategoryComponent } from './components/sub-category/sub-category.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
