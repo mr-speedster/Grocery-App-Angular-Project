@@ -11,10 +11,15 @@ import { ActivatedRoute } from "@angular/router";
 export class ProductDetailsPageComponent {
 
   product: any;
-  productId:any;
+  productId: any;
   IMG_BASE_URL = 'http://rjtmobile.com/grocery/images/';
 
-  constructor(private dataService: DataService,private activatedRoute:ActivatedRoute) {
+  /**
+   * 
+   * @param dataService 
+   * @param activatedRoute 
+   */
+  constructor(private dataService: DataService, private activatedRoute: ActivatedRoute) {
     this.productId = this.activatedRoute.snapshot.paramMap.get('productId');
     this.dataService.getProductById(this.productId).subscribe((response: productDetailsResponse) => {
       this.product = response.data;
