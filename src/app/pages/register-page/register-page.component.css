@@ -1,0 +1,17 @@
+.special-title {
+  font-family: "Rubik Wet Paint", cursive;
+}
+.form-control{
+  border-radius: 1rem;
+}
+.form-control:focus{
+  box-shadow: none;
+  border:none;
+}
+.form-bg {
+  background-color: rgba(230, 230, 230, 0.086);
+}
+.btn{
+  border-radius: 1rem;
+  background: #eca508;
+}

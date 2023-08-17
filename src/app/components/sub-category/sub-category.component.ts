@@ -12,6 +12,11 @@ export class SubCategoryComponent {
 
   subCategories: any[] = [];
 
+  /**
+   * 
+   * @param dataService 
+   * @param activatedRoute 
+   */
   constructor(private dataService: DataService, private activatedRoute: ActivatedRoute) {
     this.catId = this.activatedRoute.snapshot.paramMap.get('catId');
     this.dataService.getSubCategoryByCatID(this.catId).subscribe((response: any) => {

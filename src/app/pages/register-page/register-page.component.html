@@ -1,0 +1,95 @@
+<section id="bg-image">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+        <h1 class="special-title text-light">ADShop</h1>
+    </div>
+    <div class="row d-flex justify-content-center mt-4">
+      <div class="col-md-6">
+        <div class="container form-bg pb-5 px-5">
+          <div class="row d-flex justify-content-center">
+            <h3 class="special-title mt-4 text-light">Register</h3>
+          </div>
+          <form #registerForm="ngForm">
+            <div class="form-group">
+              <label class="text-light" for="">Username</label>
+              <input
+                [(ngModel)]="userModel.userName"
+                name="user_name"
+                type="text"
+                class="form-control"
+                required
+                #userName="ngModel"
+                [class.is-invalid]="userName.invalid && userName.touched"
+              />
+              <small
+                [class.d-none]="userName.invalid && userName.untouched"
+                class="text-danger"
+                >username is required</small
+              >
+            </div>
+            <div class="form-group">
+              <label class="text-light" for="">Email</label>
+              <input
+                [(ngModel)]="userModel.userEmail"
+                name="user_email"
+                type="email"
+                class="form-control"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+                #userEmail="ngModel"
+                [class.is-invalid]="userEmail.invalid && userEmail.touched"
+              />
+              <div *ngIf="userEmail.errors && userEmail.touched">
+                <small *ngIf="userEmail.errors['required']" class="text-danger"
+                  >email is required</small
+                >
+                <small *ngIf="userEmail.errors['pattern']" class="text-danger"
+                  >email must be a valid email</small
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="text-light" for="">Phone</label>
+              <input
+                [(ngModel)]="userModel.userPhone"
+                name="user_phone"
+                type="text"
+                class="form-control"
+                required
+                #userPhone="ngModel"
+                [class.is-invalid]="userPhone.invalid && userPhone.touched"
+              />
+              <small
+                [class.d-none]="userPhone.invalid && userPhone.untouched"
+                class="text-danger"
+                >phone is required</small
+              >
+            </div>
+            <div class="form-group">
+              <label class="text-light" for="">Password</label>
+              <input
+                [(ngModel)]="userModel.userPassword"
+                name="user_password"
+                type="password"
+                class="form-control"
+                required
+                #userPassword="ngModel"
+                [class.is-invalid]="
+                  userPassword.invalid && userPassword.touched
+                "
+              />
+              <small
+                [class.d-none]="userPassword.invalid && userPassword.untouched"
+                class="text-danger"
+                >password is required</small
+              >
+            </div>
+            <div class="row d-flex justify-content-center pt-3">
+              <button class="btn w-50">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -18,6 +18,10 @@ export class CategoryComponent {
     })
   }
 
+  /**
+   * 
+   * @param category 
+   */
   onClickCategory(category: any) {
     this.router.navigate(['/products', category.catId]);
   }

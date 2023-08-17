@@ -21,6 +21,10 @@ export class ProductsComponent {
     })
   }
 
+  /**
+   * 
+   * @param product 
+   */
   onClickProduct(product:IProduct){
     this.router.navigate(['products/details',product._id]);
   }
