@@ -23,7 +23,7 @@ export class RegisterPageComponent {
     this.renderer.setStyle(document.body, 'background-attachment', 'fixed');
   }
 
-  onclickFormSubmit() {
+  onclickRegisterFormSubmit() {
     this.authService.register(this.userModel).subscribe((response: any) => {
       Swal.fire({
         icon: 'success',

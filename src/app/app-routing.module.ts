@@ -6,6 +6,8 @@ import { ProductDetailsPageComponent } from "./pages/product-details-page/produc
 import { AboutPageComponent } from "./pages/about-page/about-page.component";
 import { ContactPageComponent } from "./pages/contact-page/contact-page.component";
 import { ErrorPageComponent } from "./components/error-page/error-page.component";
+import { RegisterPageComponent } from "./pages/register-page/register-page.component";
+import { LoginPageComponent } from "./pages/login-page/login-page.component";
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,6 +16,8 @@ const routes: Routes = [
     { path: 'products/details/:productId', component: ProductDetailsPageComponent },
     { path: 'about', component: AboutPageComponent },
     { path: 'contact', component: ContactPageComponent },
+    { path: 'register', component: RegisterPageComponent },
+    { path: 'login', component: LoginPageComponent },
     { path: '**', component: ErrorPageComponent }
 ]
 

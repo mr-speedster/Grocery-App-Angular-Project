@@ -9,13 +9,13 @@
           <div class="row d-flex justify-content-center">
             <h3 class="special-title mt-4 text-light">Register</h3>
           </div>
-          <form #registerForm="ngForm" (submit)="onclickFormSubmit()">
+          <form #registerForm="ngForm" (submit)="onclickRegisterFormSubmit()">
             
             <div class="form-group">
               <label class="text-light" for="">First Name</label>
               <input
                 [(ngModel)]="userModel.firstName"
-                name="user_name"
+                name="firstname"
                 type="text"
                 class="form-control"
                 required
@@ -29,7 +29,7 @@
               <label class="text-light" for="">Email</label>
               <input
                 [(ngModel)]="userModel.email"
-                name="user_email"
+                name="email"
                 type="email"
                 class="form-control"
                 required
@@ -47,11 +47,12 @@
               <label class="text-light" for="">Phone</label>
               <input
                 [(ngModel)]="userModel.mobile"
-                name="user_phone"
+                name="mobile"
                 type="text"
                 class="form-control"
                 required
                 pattern="^\d{10}$"
+                maxlength="10"
                 #mobile="ngModel"
                 [class.is-invalid]="mobile.invalid && mobile.touched"
               />
@@ -65,7 +66,7 @@
               <label class="text-light" for="">Password</label>
               <input
                 [(ngModel)]="userModel.password"
-                name="user_password"
+                name="password"
                 type="password"
                 class="form-control"
                 required
