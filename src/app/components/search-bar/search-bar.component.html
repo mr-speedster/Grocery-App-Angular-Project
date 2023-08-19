@@ -2,7 +2,7 @@
     <div class="col-md-6">
         <div class="form">
             <i class="fa fa-search"></i>
-            <input type="text" class="form-control form-input" placeholder="Search anything...">
+            <input (input)="onSearch()" [(ngModel)]="searchText" type="text" class="form-control form-input" placeholder="Search anything...">
             <span><i class="icon fa-solid fa-bag-shopping fa-lg"></i></span>
         </div>
     </div>
