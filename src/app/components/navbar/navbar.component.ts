@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserModel } from 'src/app/models/user.model';
 import { AuthService } from 'src/app/services/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-navbar',
@@ -9,25 +10,34 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  
-  isLoggedIn:boolean;
-  user:any;
 
-  constructor(private authService:AuthService, private router: Router){
+  isLoggedIn: boolean;
+  user: any;
+
+  constructor(private authService: AuthService, private router: Router) {
     this.isLoggedIn = this.authService.checkToken();
   }
 
-  onLogin(){
+  onLogin() {
     this.router.navigateByUrl('login')
   }
 
-  onLogOut(){
+  onLogOut() {
     this.authService.logOut();
     this.router.navigateByUrl('login');
   }
 
-  onUserProfile(){
+  onUserProfile() {
     this.user = localStorage.getItem('user');
-    alert(this.user.firstname)
+    if (this.user) {
+      this.user = JSON.parse(this.user)
+      Swal.fire({
+        icon: 'info',
+        title: 'User Profile',
+        html:
+          this.user.firstName + '<br>' + this.user.email + '<br>' + this.user.mobile + '<br>',
+        confirmButtonColor: '#eca508'
+      })
+    }
   }
 }

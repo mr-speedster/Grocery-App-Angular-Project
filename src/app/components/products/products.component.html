@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-4 my-4" *ngFor="let product of products;">
-    <div class="card" *ngIf="searchText==='ffffff' || product.productName.toLowerCase().includes(searchText)">
+    <div class="card" *ngIf="searchText==='' || product.productName.toLowerCase().includes(searchText)">
       <div class="sticky-top ml-auto">
         <span class="badge badge-warning">60% off</span>
       </div>
