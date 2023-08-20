@@ -6,7 +6,7 @@
     <li *ngFor="let subCategory of subCategories">
       <div class="input-group mb-3">
         <div class="input-group-text bg-light font-weight-bold text-dark w-100">
-          <input class="input-checkbox" type="checkbox" aria-label="Checkbox for following text input">
+          <input class="input-checkbox" (change)="onSubCategorySelection(subCategory.subId)" type="checkbox" aria-label="Checkbox for following text input">
           &nbsp;&nbsp;<span>{{subCategory.subName}}</span>
         </div>
       </div>

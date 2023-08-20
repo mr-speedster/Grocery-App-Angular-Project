@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class ProductPageComponent {
   searchText: string = '';
+  selectedSubCategoryId:any = -1;
 }

@@ -17,6 +17,9 @@ export class ProductsComponent {
   @Input()
   searchText:string = '';
 
+  @Input()
+  selectedSubCategoryId:any;
+
   /**
    * 
    * @param dataService 

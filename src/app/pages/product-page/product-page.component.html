@@ -1,12 +1,12 @@
 <app-navbar></app-navbar>
-<div class="container-fluid"> 
-    <app-search-bar (searchEvent)="searchText=$event"></app-search-bar>
-    <div class="row">
-      <div class="col-md-3 mt-5 border">
-        <app-sub-category></app-sub-category>
-      </div>
-      <div class="col-md-9 mt-5 border">
-        <app-products [searchText]="searchText"></app-products>
-      </div>
+<div class="container-fluid">
+  <app-search-bar (searchEvent)="searchText=$event"></app-search-bar>
+  <div class="row">
+    <div class="col-md-3 mt-5 border">
+      <app-sub-category (selectedCategoryEvent)="selectedSubCategoryId = $event"></app-sub-category>
     </div>
+    <div class="col-md-9 mt-5 border">
+      <app-products [searchText]="searchText" [selectedSubCategoryId]="selectedSubCategoryId"></app-products>
+    </div>
+  </div>
 </div>
